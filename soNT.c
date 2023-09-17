@@ -18,18 +18,13 @@ int isPrimeNumber(int n) {
     return 1;
 }
  
-/**
- * Ham main
- */
 int main() {
- int i, n;
+ int n;
     printf("Nhap n = ");
     scanf("%d", &n);
     printf("Tat ca cac so nguyen to nho hon %d la: \n", n);
-    if (n >= 2) {
-        printf("%d ", 2);
-    }
-    for (i = 3; i < n; i+=2) {
+  
+    for (int i = 0; i < n; i+=2) {
         if (isPrimeNumber(i) == 1) {
             printf("%d ", i);
         }
