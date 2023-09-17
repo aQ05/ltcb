@@ -47,7 +47,15 @@ void XuatMaTran(int a[][100], int m, int n)
         printf("\n");
     }
 }
-
+void Tinh_tong_hang(int a[][100], int n, int hang)
+{
+    int tong = 0;
+    for (int i = 0; i < n; i++)
+    {
+        tong += a[hang - 1][i];
+    }
+    printf("Tong hang can tinh la : %d\n", tong);
+}
 int main()
 {
     int a[100][100], m, n;
@@ -62,5 +70,10 @@ int main()
     XuatMaTran(a, m, n);
     printf("cac so nguyen to trong ma tran la: ");
     LietKeSNT(a, m, n);
-
+    printf("\n");
+    int hang;
+    int tong = 0;
+    printf("\nMoi ban nhap hang can tinh : ");
+    scanf("%d", &hang);
+    Tinh_tong_hang(a, n, hang);
 }
